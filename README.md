@@ -9,3 +9,8 @@
 
 3- En el navegador → http://localhost/ProyectoFinalEva/catalogo.php 
   (mi proyecto)
+
+4- Para pagar usar esta cuenta → 
+			 sb-pceyv38901932@personal.example.com
+			 contraseña → ruE5*P-5
+
