@@ -35,7 +35,7 @@ if ($productos != null) {
     <title>MODA & MORE</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,13 +43,25 @@ if ($productos != null) {
     <header>
         <div class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a href="#" class="navbar-brand"><strong>MODA & MORE</strong></a>
+                <a href="catalogo.php" class="navbar-brand"><strong>MODA & MORE</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarHeader">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a href="#" class="nav-link active">Catálogo</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="catalogoDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Catálogo
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
+                                <li><a class="dropdown-item" href="catalogo.php?categoria=1">Ropa de Mujer</a></li>
+                                <li><a class="dropdown-item" href="catalogo.php?categoria=2">Accesorios</a></li>
+                                <li><a class="dropdown-item" href="catalogo.php?categoria=3">Hogar y vida</a></li>
+                                <li><a class="dropdown-item" href="catalogo.php?categoria=4">Belleza y salud</a></li>
+                            </ul>
+                        </li>
+
                     </ul>
                     <a href="carrito.php" class="btn btn-primary">
                         Carrito <span id="num_cart" class="badge bg-secondary"><?php echo $num_cart ?? 0 ?></span>
@@ -65,6 +77,7 @@ if ($productos != null) {
                 <div class="col-6">
                     <h4>Detalles de pago</h4>
                     <div id="paypal-button-container"></div>
+                    <div id="mensaje-pago" class="alert alert-warning d-none mt-3" role="alert"></div>
                 </div>
                 <div class="col-6">
                     <div class="table-responsive">
@@ -86,20 +99,21 @@ if ($productos != null) {
                                         $precio = $producto['precio'];
                                         $descuento = $producto['descuento'];
                                         $cantidad = $producto['cantidad'];
-                                        $talla = $producto['talla']; // Obtener la talla
+                                        $talla = $producto['talla'];
                                         $precio_desc = $precio - (($precio * $descuento) / 100);
                                         $subtotal = $cantidad * $precio_desc;
                                         $total += $subtotal;
                                         ?>
                                         <tr>
-                                            <td><?php echo $nombre . ' - Talla: ' . $talla; ?></td>  <!-- Mostrar talla -->
+                                            <td><?php echo $nombre . ' - Talla: ' . $talla; ?></td>
                                             <td><?php echo number_format($subtotal, 2, '.', ',') . MONEDA; ?></td>
                                         </tr>
                                     <?php } ?>
                                     <tr>
                                         <td colspan="2">
                                             <p class="h3 text-end" id="total">
-                                                <?php echo number_format($total, 2, '.', ',') . MONEDA; ?></p>
+                                                <?php echo number_format($total, 2, '.', ',') . MONEDA; ?>
+                                            </p>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -111,20 +125,20 @@ if ($productos != null) {
         </div>
     </main>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- PayPal SDK -->
     <script
         src="https://www.paypal.com/sdk/js?client-id=<?php echo CLIENT_ID; ?>&currency=<?php echo CURRENCY; ?>"></script>
 
     <script>
         paypal.Buttons({
             style: {
-                color: 'blue',
+                color: 'black',
                 shape: 'pill',
-                label: 'pay'
+                label: 'pay',
+                layout: 'vertical',
+                height: 40
             },
+
             createOrder: function (data, actions) {
                 return actions.order.create({
                     purchase_units: [{
@@ -135,24 +149,24 @@ if ($productos != null) {
                 });
             },
             onApprove: function (data, actions) {
-                let URL = 'clases/captura.php'
+                let URL = 'clases/captura.php';
                 actions.order.capture().then(function (detalles) {
-                    let url = 'clases/captura.php'
-                    return fetch(url, {
+                    fetch(URL, {
                         method: 'post',
                         headers: {
                             'content-type': 'application/json'
                         },
-                        body: JSON.stringify({
-                            detalles: detalles
-                        })
-                    })
+                        body: JSON.stringify({ detalles: detalles })
+                    }).then(function () {
+                        window.location.href = 'mensaje.php?estado=aprobado';
+                    });
                 });
             },
+
             onCancel: function (data) {
-                alert("Pago cancelado");
-                console.log(data);
+                window.location.href = 'mensaje.php?estado=cancelado';
             }
+
         }).render('#paypal-button-container');
     </script>
 

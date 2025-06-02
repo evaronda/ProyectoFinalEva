@@ -2,7 +2,7 @@
 
 require '../config/config.php';
 
-if(isset($_POST['id'])) {
+if (isset($_POST['id'])) {
 
     $id = $_POST['id'];
     $token = $_POST['token'];
@@ -13,7 +13,7 @@ if(isset($_POST['id'])) {
 
         $talla = isset($_POST['talla']) ? $_POST['talla'] : 'N/A';
 
-        if(isset($_SESSION['carrito']['productos'][$id])) {
+        if (isset($_SESSION['carrito']['productos'][$id])) {
             if (is_array($_SESSION['carrito']['productos'][$id])) {
                 $_SESSION['carrito']['productos'][$id]['cantidad'] += 1;
             } else {
@@ -28,11 +28,11 @@ if(isset($_POST['id'])) {
                 'talla' => $talla
             ];
         }
-        
+
 
         $datos['numero'] = count($_SESSION['carrito']['productos']);
         $datos['ok'] = true;
-        
+
 
 
     } else {

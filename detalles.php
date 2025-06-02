@@ -63,7 +63,7 @@ if ($id == '' || $token == '') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MODA & MORE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
+    <link href="estilos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -71,13 +71,24 @@ if ($id == '' || $token == '') {
     <header>
         <div class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a href="#" class="navbar-brand"><strong>MODA & MORE</strong></a>
+                <a href="catalogo.php" class="navbar-brand"><strong>MODA & MORE</strong></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarHeader">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a href="#" class="nav-link active">Catálogo</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="catalogoDropdown" role="button"
+                                data-bs-toggle="dropdown">
+                                Catálogo
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
+                                <li><a class="dropdown-item" href="catalogo.php?categoria=1">Ropa de Mujer</a></li>
+                                <li><a class="dropdown-item" href="catalogo.php?categoria=2">Accesorios</a></li>
+                                <li><a class="dropdown-item" href="catalogo.php?categoria=3">Hogar y vida</a></li>
+                                <li><a class="dropdown-item" href="catalogo.php?categoria=4">Belleza y salud</a></li>
+                            </ul>
+                        </li>
                     </ul>
                     <a href="checkout.php" class="btn btn-primary">
                         Carrito <span id="num_cart" class="badge bg-secondary"><?php echo $num_cart ?></span>

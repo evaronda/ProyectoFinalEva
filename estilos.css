@@ -1,0 +1,454 @@
+.table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: coral;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.table td {
+    padding: 15px;
+    vertical-align: middle;
+    text-align: center;
+    color: black;
+}
+
+    .table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .table td input {
+        width: 60px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        padding: 5px;
+        color: black;
+    }
+
+    .table td a {
+        text-decoration: none;
+        color: white;
+        background-color: #ff7f50;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .table td a:hover {
+        background-color: #ff5733;
+    }
+
+
+    .btn-primary {
+        background-color: #ff7f50;
+        border-color: #ff7f50;
+        font-size: 1.1em;
+        padding: 12px 30px;
+        border-radius: 5px;
+        color: black;
+    }
+
+    .btn-primary:hover {
+        background-color: #ff5733;
+        border-color: #ff5733;
+        color: black;
+
+    }
+
+    .modal-header {
+        background-color: #ff7f50;
+        color: black;
+        border-bottom: 2px solid #ff5733;
+    }
+
+    .modal-footer .btn-danger {
+        background-color: #ff5733;
+        border-color: #ff5733;
+        color: black;
+    }
+
+    .modal-footer .btn-danger:hover {
+        background-color: #c44d28;
+        border-color: #c44d28;
+        color: black;
+
+    }
+
+    #total {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #ff7f50;
+    }
+
+
+    .card {
+        border-radius: 8px;
+        border: none;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-img-top {
+        object-fit: contain;
+        height: 250px;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .card-text {
+        font-size: 1em;
+        color: #777;
+    }
+
+
+    #num_cart {
+        background-color: #ff5733;
+        color: black;
+        border-radius: 50%;
+        padding: 5px 10px;
+    }
+
+    .table {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .table th {
+        background-color: coral;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .table td {
+        color: black;
+        text-align: center;
+    }
+
+    .navbar {
+        margin-bottom: 20px;
+    }
+
+    .h3 {
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: coral;
+        color: black;
+    }
+
+    .alert {
+        display: none;
+    }
+
+
+    .table th {
+        background-color: coral;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+    .table td {
+        color: black;
+        text-align: center;
+    }
+
+
+    #paypal-button-container {
+        background-color: #fff;
+        border: 2px solid coral;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08);
+        transition: box-shadow 0.3s ease-in-out;
+    }
+
+    #paypal-button-container:hover {
+        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    h4 {
+        font-size: 1.6em;
+        font-weight: bold;
+        color: coral;
+        margin-bottom: 20px;
+    }
+
+    #mensaje-pago {
+        font-size: 1em;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+
+    .col-6:first-child {
+        background-color: #fff7f5;
+        border: 1px solid #ffe2da;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 10px rgba(255, 127, 80, 0.1);
+    }
+
+
+    main {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
+
+    img.d-block {
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    img.d-block:hover {
+        transform: scale(1.05);
+    }
+
+
+    h2 {
+        font-size: 2em;
+        font-weight: bold;
+        color: coral;
+        margin-bottom: 15px;
+    }
+
+    del {
+        color: #888;
+        font-size: 1.2em;
+    }
+
+    small.text-success {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+
+    .lead {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+
+    .btn-primary {
+        background-color: coral;
+        border-color: coral;
+        padding: 12px 30px;
+        font-size: 1.1em;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+        background-color: #ff5733;
+        border-color: #ff5733;
+    }
+
+    .btn-outline-primary {
+        background-color: transparent;
+        border: 2px solid coral;
+        padding: 12px 30px;
+        font-size: 1.1em;
+        border-radius: 5px;
+        color: coral;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: coral;
+        color: white;
+    }
+
+
+    .col-md-6.order-md-2 {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .col-md-6.order-md-1 {
+        margin-bottom: 30px;
+    }
+
+
+    .navbar {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: #343a40;
+    }
+
+    .navbar-brand {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        color: white;
+        font-size: 1.1em;
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        color: coral;
+    }
+
+
+    #num_cart {
+        background-color: coral;
+        color: black;
+        border-radius: 50%;
+        padding: 5px 10px;
+    }
+
+
+    table {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    table td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    table td img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    table td img:hover {
+        transform: scale(1.1);
+    }
+
+
+    .navbar .nav-item .dropdown-menu {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+        padding: 10px 15px;
+        font-size: 1.1em;
+    }
+
+    .navbar .nav-item .dropdown-menu .dropdown-item {
+        padding: 10px 20px;
+        color: #343a40;
+        border-radius: 6px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+
+    .navbar .nav-item .dropdown-menu .dropdown-item:hover {
+        background-color: #ff5733;
+        color: white;
+    }
+
+
+    .navbar .nav-item .dropdown-menu .dropdown-item.active {
+        background-color: #ff5733;
+        color: white;
+        font-weight: bold;
+    }
+
+
+    .navbar .nav-item .dropdown-toggle {
+        font-size: 1.1em;
+        color: white;
+        background-color: transparent;
+        border: none;
+        transition: color 0.3s ease;
+    }
+
+
+    .navbar .nav-item .dropdown-toggle:hover {
+        color: #ff5733;
+    }
+
+
+    .navbar .nav-item .dropdown-toggle.active {
+        color: #ff5733;
+    }
+
+
+    .navbar .d-flex {
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .form-control {
+        border: 1px solid #ddd;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 1.1em;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+    .navbar .form-control:focus {
+        border-color: #ff5733;
+        box-shadow: 0 0 5px rgba(255, 87, 51, 0.5);
+        outline: none;
+    }
+
+
+    .navbar .btn-outline-success {
+        background-color: #ff5733;
+        border-color: #ff5733;
+        color: white;
+        border-radius: 25px;
+        padding: 12px 30px;
+        font-size: 1.1em;
+        transition: background-color 0.3s ease;
+    }
+
+
+    .navbar .btn-outline-success:hover {
+        background-color: #ff7f50;
+        border-color: #ff7f50;
+    }
+
+
+    .navbar .form-control::placeholder {
+        color: #aaa;
+    }
+
+
+    @media (max-width: 576px) {
+        .navbar .d-flex {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar .form-control {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .navbar .btn-outline-success {
+            width: 100%;
+        }
+    }
